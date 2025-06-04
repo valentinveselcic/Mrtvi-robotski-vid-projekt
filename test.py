@@ -10,8 +10,8 @@ import sys
 import data_utils
 import trainer
 
-LOGGER = logging.getLogger(__name__)
-LOGGER.addHandler(logging.NullHandler())
+# LOGGER = logging.getLogger(__name__)
+# LOGGER.addHandler(logging.NullHandler())
 
 sys.path.append('.')  # Ensure current directory is in path
 from rgrv_project_helper_functions import PNGPointCloudDataset  # Adjust import if needed
@@ -114,13 +114,13 @@ def test(args, testset, dptnetlk):
         batch_size=args.batch_size, shuffle=False, num_workers=args.workers, drop_last=False)
 
     # testing
-    LOGGER.debug('Begin Testing!')
+    # LOGGER.debug('Begin Testing!')
     dptnetlk.test_one_epoch(model, testloader, args.device, 'test', args.data_type, args.vis)
 
     # Add visualization after testing
     print("\nGenerating visualizations...")
-    testset.visualize_pair(0)  # Failed pair
-    testset.visualize_pair(2)  # Good pair
+    testset.visualize_pair(4)  # Failed pair
+    testset.visualize_pair(5)  # Good pair
 
 
 def main(args):
@@ -179,16 +179,68 @@ def get_datasets(args):
     
     return testset
 
+def visualize_dataset_pair(dataset, idx, model=None, device='cpu'):
+    """
+    Visualize a specific pair from the dataset with debug info
+    """
+    # Get the point cloud pair
+    src, tgt, gt_pose = dataset[idx]
+    
+    # Convert to numpy
+    src_np = src.numpy()
+    tgt_np = tgt.numpy()
+    gt_pose_np = gt_pose.numpy()
+    
+    print(f"Visualizing pair {idx}: {dataset.png_paths[idx]} -> {dataset.png_paths[idx+1]}")
+    print(f"Source points: {src_np.shape[0]}")
+    print(f"Target points: {tgt_np.shape[0]}")
+    
+    # DEBUG: Check ground truth transformation
+    print(f"Ground truth transformation:")
+    print(gt_pose_np)
+    
+    # If model is provided, get predicted transformation
+    if model is not None:
+        model.eval()
+        with torch.no_grad():
+            # Add batch dimension
+            src_batch = src.unsqueeze(0).to(device)
+            tgt_batch = tgt.unsqueeze(0).to(device)
+            
+            # Get prediction - THIS IS THE KEY PART
+            pred_pose = model(src_batch, tgt_batch)  # Make sure this calls the right method
+            pred_pose_np = pred_pose.cpu().numpy()[0]
+            
+            # DEBUG: Check predicted transformation
+            print(f"Predicted transformation:")
+            print(pred_pose_np)
+            
+            # Show predicted transformation
+            visualize_point_cloud_registration(
+                src_np, tgt_np, pred_pose_np,
+                title=f"Predicted Registration - Pair {idx}",
+                save_path=f"registration_pair_{idx}_predicted.png"
+            )
+    else:
+        print("No model provided - skipping predicted transformation")
+    
+    # Show ground truth (identity) transformation
+    visualize_point_cloud_registration(
+        src_np, tgt_np, gt_pose_np,
+        title=f"Ground Truth Registration - Pair {idx}",
+        save_path=f"registration_pair_{idx}_gt.png"
+    )
+
     
 if __name__ == '__main__':
     ARGS = options()
 
-    logging.basicConfig(
-        level=logging.DEBUG,
-        format='%(levelname)s:%(name)s, %(asctime)s, %(message)s',
-        filename=ARGS.logfile)
-    LOGGER.debug('Testing (PID=%d), %s', os.getpid(), ARGS)
+    # logging.basicConfig(
+    #     level=logging.DEBUG,
+    #     format='%(levelname)s:%(name)s, %(asctime)s, %(message)s',
+    #     filename=ARGS.logfile)
+    # LOGGER.debug('Testing (PID=%d), %s', os.getpid(), ARGS)
 
     main(ARGS)
 
-    LOGGER.debug('Testing completed! Hahaha~~ (PID=%d)', os.getpid())
+    # LOGGER.debug('Testing completed! Hahaha~~ (PID=%d)', os.getpid())

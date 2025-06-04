@@ -1,0 +1,37 @@
+POINTNETLK REGISTRATION RESULTS FOR TREE_1_V_0012
+============================================================
+Generated: 2025-06-04 02:31:25
+
+SUMMARY
+Success Rate: 100.0% (3/3)
+Translation Error - Mean: 0.0173m
+Translation Error - Std:  0.0035m
+Translation Error - Max:  0.0223m
+Rotation Error - Mean: 12.7°
+Rotation Error - Std:  2.7°
+Rotation Error - Max:  16.2°
+Convergence - Mean iterations: 19.3
+
+DETAILED RESULTS
+----------------------------------------
+pair_0_0_to_1:
+  Success: YES
+  Translation error: 0.0223m
+  Rotation error: 16.2°
+  Iterations: 20
+  Converged: NO
+
+pair_1_1_to_4:
+  Success: YES
+  Translation error: 0.0150m
+  Rotation error: 9.7°
+  Iterations: 18
+  Converged: YES
+
+pair_2_4_to_5:
+  Success: YES
+  Translation error: 0.0146m
+  Rotation error: 12.3°
+  Iterations: 20
+  Converged: NO
+

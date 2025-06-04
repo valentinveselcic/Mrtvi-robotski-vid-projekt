@@ -1,0 +1,56 @@
+============================================================
+COMPREHENSIVE RELIABILITY TEST WITH SELECTIVE VISUALIZATION
+============================================================
+✓ Loaded model from logs/model_trained_on_ModelNet40_model_best.pth
+
+========================================
+PROCESSING TREE_1_V_0009
+========================================
+Testing 3 pairs from tree_1_V_0009...
+
+--- pair_0_0_to_3 ---
+Source: 0.png
+
+========================================
+PROCESSING TREE_1_V_0009
+========================================
+Testing 3 pairs from tree_1_V_0009...
+
+--- pair_0_0_to_3 ---
+Source: 0.png
+Testing 3 pairs from tree_1_V_0009...
+
+--- pair_0_0_to_3 ---
+Source: 0.png
+Target: 3.png
+Source points: 8192, Target points: 8192
+  Running inference (max 20 iterations)... ✓ (20 iterations)
+Visualization saved to: results/tree_1_V_0009/pair_0_0_to_3_iteration_00_initial.png
+Visualization saved to: results/tree_1_V_0009/pair_0_0_to_3_iteration_20_final.png
+  ✓ Saved initial and final visualizations to results/tree_1_V_0009/
+>> HIGH ERROR
+  Trans error: 0.0426m, Rot error: 118.1°, Iterations: 20
+
+--- pair_1_3_to_4 ---
+Source: 3.png
+Target: 4.png
+Target: 4.png
+Source points: 8192, Target points: 8192
+  Running inference (max 20 iterations)... ✓ (20 iterations)
+Visualization saved to: results/tree_1_V_0009/pair_1_3_to_4_iteration_00_initial.png
+Visualization saved to: results/tree_1_V_0009/pair_1_3_to_4_iteration_00_initial.png
+Visualization saved to: results/tree_1_V_0009/pair_1_3_to_4_iteration_20_final.png
+  ✓ Saved initial and final visualizations to results/tree_1_V_0009/
+>> SUCCESS
+  Trans error: 0.0072m, Rot error: 5.6°, Iterations: 20
+
+--- pair_2_4_to_5 ---
+Source: 4.png
+Target: 5.png
+Source points: 8192, Target points: 8192
+  Running inference (max 20 iterations)... ✓ (20 iterations)
+Visualization saved to: results/tree_1_V_0009/pair_2_4_to_5_iteration_00_initial.png
+Visualization saved to: results/tree_1_V_0009/pair_2_4_to_5_iteration_20_final.png
+  ✓ Saved initial and final visualizations to results/tree_1_V_0009/
+>> SUCCESS
+  Trans error: 0.0101m, Rot error: 24.5°, Iterations: 20

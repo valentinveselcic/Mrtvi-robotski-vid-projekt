@@ -1,23 +1,4 @@
-# import warnings
-# import logging
-# import os
-
-# # Suppress ALL warnings and debug messages - MUST be at the very top
-# warnings.filterwarnings('ignore')
-# os.environ['PYTHONWARNINGS'] = 'ignore'
-
-# # Set up aggressive logging suppression BEFORE any other imports
-# logging.basicConfig(level=logging.ERROR)
-# for logger_name in ['PIL', 'PIL.PngImagePlugin', 'matplotlib', 'matplotlib.font_manager', 
-#                    'matplotlib.pyplot', 'matplotlib.backends']:
-#     logging.getLogger(logger_name).setLevel(logging.ERROR)
-#     logging.getLogger(logger_name).disabled = True
-
-# Also set matplotlib to use non-interactive backend to reduce debug output
 import matplotlib
-matplotlib.use('Agg')  # Use non-interactive backend
-matplotlib.set_loglevel('ERROR')
-
 
 import numpy as np
 import cv2
@@ -96,7 +77,7 @@ def visualize_point_cloud_registration(src_points, tgt_points, transformation_ma
     fig = plt.figure(figsize=(15, 5))
     
     # Plot 1: All three point clouds
-    ax1 = fig.add_subplot(131, projection='3d')
+    ax1 = fig.add_subplot(121, projection='3d')
     ax1.scatter(src_vis[:, 0], src_vis[:, 1], src_vis[:, 2], 
                c='red', s=1, alpha=0.6, label='Source (Red)')
     ax1.scatter(tgt_vis[:, 0], tgt_vis[:, 1], tgt_vis[:, 2], 
@@ -109,29 +90,17 @@ def visualize_point_cloud_registration(src_points, tgt_points, transformation_ma
     ax1.set_ylabel('Y')
     ax1.set_zlabel('Z')
     
-    # Plot 2: Source vs Target
-    ax2 = fig.add_subplot(132, projection='3d')
-    ax2.scatter(src_vis[:, 0], src_vis[:, 1], src_vis[:, 2], 
-               c='red', s=1, alpha=0.8, label='Source (Red)')
+    # Plot 2: Transformed Source vs Target
+    ax2 = fig.add_subplot(122, projection='3d')
+    ax2.scatter(src_transformed[:, 0], src_transformed[:, 1], src_transformed[:, 2], 
+               c='blue', s=1, alpha=0.8, label='Transformed Source (Blue)')
     ax2.scatter(tgt_vis[:, 0], tgt_vis[:, 1], tgt_vis[:, 2], 
                c='green', s=1, alpha=0.8, label='Target (Green)')
-    ax2.set_title('Before Registration')
+    ax2.set_title('After Registration')
     ax2.legend()
     ax2.set_xlabel('X')
     ax2.set_ylabel('Y')
     ax2.set_zlabel('Z')
-    
-    # Plot 3: Transformed Source vs Target
-    ax3 = fig.add_subplot(133, projection='3d')
-    ax3.scatter(src_transformed[:, 0], src_transformed[:, 1], src_transformed[:, 2], 
-               c='blue', s=1, alpha=0.8, label='Transformed Source (Blue)')
-    ax3.scatter(tgt_vis[:, 0], tgt_vis[:, 1], tgt_vis[:, 2], 
-               c='green', s=1, alpha=0.8, label='Target (Green)')
-    ax3.set_title('After Registration')
-    ax3.legend()
-    ax3.set_xlabel('X')
-    ax3.set_ylabel('Y')
-    ax3.set_zlabel('Z')
     
     plt.suptitle(title)
     plt.tight_layout()

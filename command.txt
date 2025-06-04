@@ -1,1 +1,0 @@
-python test.py --dataset_type png --pretrained ./logs/model_trained_on_ModelNet40_model_best.pth --device cpu

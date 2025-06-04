@@ -1,0 +1,236 @@
+============================================================
+COMPREHENSIVE RELIABILITY TEST
+============================================================
+✓ Loaded model from logs/model_trained_on_ModelNet40_model_best.pth
+Testing 6 pairs...
+
+--- Pair 0: miniBRANCH/tree_1_V_0001/Filtered__noGrass/depth/0.png → miniBRANCH/tree_1_V_0001/Filtered__noGrass/depth/1.png ---
+  Testing with max_iter=5... Source shape: torch.Size([1, 8192, 3]), Target shape: torch.Size([1, 8192, 3])
+Source requires_grad: True, Target requires_grad: True
+✓ Inference successful! Iterations: 5
+Estimated transformation:
+[[ 0.8019044   0.55397147  0.22375216 -0.00579119]
+ [-0.57578546  0.81652194  0.04198821 -0.00881503]
+ [-0.1594383  -0.16250376  0.97374123 -0.00499484]
+ [ 0.          0.          0.          1.        ]]
+✓ SUCCESS
+  Testing with max_iter=10... Source shape: torch.Size([1, 8192, 3]), Target shape: torch.Size([1, 
+8192, 3])
+Source requires_grad: True, Target requires_grad: True
+✓ Inference successful! Iterations: 10
+Estimated transformation:
+[[ 0.5675324   0.774973    0.27807125 -0.00771279]
+ [-0.7889776   0.6084504  -0.08545391 -0.00310884]
+ [-0.23541708 -0.17089412  0.9567518  -0.00347802]
+ [ 0.          0.          0.          1.        ]]
+✓ SUCCESS
+  Testing with max_iter=20... Source shape: torch.Size([1, 8192, 3]), Target shape: torch.Size([1, 
+8192, 3])
+Source requires_grad: True, Target requires_grad: True
+✓ Inference successful! Iterations: 20
+Estimated transformation:
+[[ 3.0489865e-01  9.0761042e-01  2.8858256e-01 -8.0633713e-03]
+ [-9.0828753e-01  3.6824611e-01 -1.9851625e-01  2.0205509e-04]
+ [-2.8644487e-01 -2.0158854e-01  9.3664879e-01 -2.5188476e-03]
+ [ 0.0000000e+00  0.0000000e+00  0.0000000e+00  1.0000000e+00]]
+✓ SUCCESS
+
+--- Pair 1: miniBRANCH/tree_1_V_0001/Filtered__noGrass/depth/1.png → miniBRANCH/tree_1_V_0001/Filtered__noGrass/depth/2.png ---
+  Testing with max_iter=5... Source shape: torch.Size([1, 8192, 3]), Target shape: torch.Size([1, 8192, 3])
+Source requires_grad: True, Target requires_grad: True
+✓ Inference successful! Iterations: 5
+Estimated transformation:
+[[ 9.9963874e-01 -2.5903270e-02 -7.1652029e-03 -3.6456552e-04]
+ [ 2.5896659e-02  9.9966407e-01 -1.0142332e-03 -1.4566714e-03]
+ [ 7.1890689e-03  8.2831515e-04  9.9997371e-01 -3.9571598e-03]
+ [ 0.0000000e+00  0.0000000e+00  0.0000000e+00  1.0000000e+00]]
+✓ SUCCESS
+  Testing with max_iter=10... Source shape: torch.Size([1, 8192, 3]), Target shape: torch.Size([1, 
+8192, 3])
+Source requires_grad: True, Target requires_grad: True
+ [ 0.0000000e+00  0.0000000e+00  0.0000000e+00  1.0000000e+00]]
+✓ SUCCESS
+  Testing with max_iter=10... Source shape: torch.Size([1, 8192, 3]), Target shape: torch.Size([1, 
+8192, 3])
+Source requires_grad: True, Target requires_grad: True
+  Testing with max_iter=10... Source shape: torch.Size([1, 8192, 3]), Target shape: torch.Size([1, 
+8192, 3])
+Source requires_grad: True, Target requires_grad: True
+8192, 3])
+Source requires_grad: True, Target requires_grad: True
+Source requires_grad: True, Target requires_grad: True
+✓ Inference successful! Iterations: 10
+Estimated transformation:
+[[ 9.9963361e-01 -2.6103918e-02 -7.1676411e-03 -3.6531640e-04]
+[[ 9.9963361e-01 -2.6103918e-02 -7.1676411e-03 -3.6531640e-04]
+ [ 2.6097145e-02  9.9965894e-01 -1.0369315e-03 -1.4555785e-03]
+ [ 7.1922648e-03  8.4949960e-04  9.9997365e-01 -3.9552525e-03]
+ [ 7.1922648e-03  8.4949960e-04  9.9997365e-01 -3.9552525e-03]
+ [ 0.0000000e+00  0.0000000e+00  0.0000000e+00  1.0000000e+00]]
+✓ SUCCESS
+  Testing with max_iter=20... Source shape: torch.Size([1, 8192, 3]), Target shape: torch.Size([1, 
+8192, 3])
+Source requires_grad: True, Target requires_grad: True
+✓ Inference successful! Iterations: 15
+Estimated transformation:
+[[ 9.9963361e-01 -2.6104147e-02 -7.1676187e-03 -3.6531407e-04]
+ [ 2.6097374e-02  9.9965894e-01 -1.0369933e-03 -1.4555758e-03]
+ [ 7.1922443e-03  8.4956002e-04  9.9997365e-01 -3.9552450e-03]
+ [ 0.0000000e+00  0.0000000e+00  0.0000000e+00  1.0000000e+00]]
+✓ SUCCESS
+
+--- Pair 2: miniBRANCH/tree_1_V_0001/Filtered__noGrass/depth/2.png → miniBRANCH/tree_1_V_0001/Filtered__noGrass/depth/3.png ---
+  Testing with max_iter=5... Source shape: torch.Size([1, 8192, 3]), Target shape: torch.Size([1, 8192, 3])
+Source requires_grad: True, Target requires_grad: True
+✓ Inference successful! Iterations: 5
+Estimated transformation:
+[[ 8.85017037e-01 -4.65394258e-01 -1.23630315e-02  8.82164575e-04]
+ [ 4.62484717e-01  8.75817597e-01  1.38027042e-01 -1.50499763e-02]
+ [-5.34092933e-02 -1.27873987e-01  9.90351200e-01 -8.20290297e-03]
+ [ 0.00000000e+00  0.00000000e+00  0.00000000e+00  1.00000000e+00]]
+✓ SUCCESS
+  Testing with max_iter=10... Source shape: torch.Size([1, 8192, 3]), Target shape: torch.Size([1, 
+8192, 3])
+Source requires_grad: True, Target requires_grad: True
+✓ Inference successful! Iterations: 10
+Estimated transformation:
+[[ 0.86779976 -0.49655375 -0.01891664  0.00144954]
+ [ 0.49316105  0.8559517   0.15536673 -0.01592816]
+ [-0.06095623 -0.14415614  0.9876755  -0.00780695]
+ [ 0.          0.          0.          1.        ]]
+✓ SUCCESS
+  Testing with max_iter=20... Source shape: torch.Size([1, 8192, 3]), Target shape: torch.Size([1, 
+8192, 3])
+Source requires_grad: True, Target requires_grad: True
+✓ Inference successful! Iterations: 20
+Estimated transformation:
+[[ 0.866563   -0.498708   -0.01894207  0.00145138]
+ [ 0.49526414  0.8546621   0.15577537 -0.01593084]
+ [-0.06149738 -0.14437051  0.98761064 -0.00777221]
+ [ 0.          0.          0.          1.        ]]
+✓ SUCCESS
+
+--- Pair 3: miniBRANCH/tree_1_V_0001/Filtered__noGrass/depth/3.png → miniBRANCH/tree_1_V_0001/Filtered__noGrass/depth/4.png ---
+  Testing with max_iter=5... Source shape: torch.Size([1, 8192, 3]), Target shape: torch.Size([1, 8192, 3])
+Source requires_grad: True, Target requires_grad: True
+✓ Inference successful! Iterations: 5
+Estimated transformation:
+[[ 0.99722207  0.07434239  0.00460319  0.00407186]
+ [-0.07389017  0.9795772   0.18699966 -0.00555702]
+ [ 0.00939285 -0.18682031  0.98234916 -0.00956223]
+ [ 0.          0.          0.          1.        ]]
+✓ SUCCESS
+  Testing with max_iter=10... Source shape: torch.Size([1, 8192, 3]), Target shape: torch.Size([1, 
+8192, 3])
+Source requires_grad: True, Target requires_grad: True
+✓ Inference successful! Iterations: 10
+Estimated transformation:
+[[ 0.9972152   0.07437204  0.0055353   0.00400919]
+ [-0.07408367  0.9793469   0.18812582 -0.00566913]
+ [ 0.00857035 -0.18801199  0.9821293  -0.00960021]
+ [ 0.          0.          0.          1.        ]]
+✓ SUCCESS
+  Testing with max_iter=20... Source shape: torch.Size([1, 8192, 3]), Target shape: torch.Size([1, 
+8192, 3])
+Source requires_grad: True, Target requires_grad: True
+✓ Inference successful! Iterations: 20
+Estimated transformation:
+[[ 0.9972136   0.07439239  0.00555352  0.00400801]
+ [-0.07410704  0.97934407  0.1881313  -0.00566996]
+ [ 0.00855676 -0.18801858  0.98212814 -0.00960068]
+ [ 0.          0.          0.          1.        ]]
+✓ SUCCESS
+
+--- Pair 4: miniBRANCH/tree_1_V_0001/Filtered__noGrass/depth/4.png → miniBRANCH/tree_1_V_0001/Filtered__noGrass/depth/5.png ---
+  Testing with max_iter=5... Source shape: torch.Size([1, 8192, 3]), Target shape: torch.Size([1, 8192, 3])
+Source requires_grad: True, Target requires_grad: True
+✓ Inference successful! Iterations: 5
+Estimated transformation:
+[[ 0.99995613 -0.00708128 -0.00614119  0.00941177]
+ [ 0.00735289  0.998942    0.04539583  0.00707401]
+ [ 0.00581324 -0.045439    0.9989502  -0.00192165]
+ [ 0.          0.          0.          1.        ]]
+✓ SUCCESS
+  Testing with max_iter=10... Source shape: torch.Size([1, 8192, 3]), Target shape: torch.Size([1, 
+8192, 3])
+Source requires_grad: True, Target requires_grad: True
+✓ Inference successful! Iterations: 10
+Estimated transformation:
+[[ 0.99994576 -0.00882422 -0.00553646  0.00928482]
+ [ 0.00907578  0.99884474  0.04718993  0.00691827]
+ [ 0.00511364 -0.04723762  0.99887055 -0.00188462]
+ [ 0.          0.          0.          1.        ]]
+✓ SUCCESS
+  Testing with max_iter=20... Source shape: torch.Size([1, 8192, 3]), Target shape: torch.Size([1, 
+8192, 3])
+Source requires_grad: True, Target requires_grad: True
+✓ Inference successful! Iterations: 20
+Estimated transformation:
+[[ 0.99993956 -0.0093237  -0.00585034  0.00929731]
+ [ 0.00959069  0.9988298   0.04740462  0.00691302]
+ [ 0.00540151 -0.04745786  0.99885863 -0.0018807 ]
+ [ 0.          0.          0.          1.        ]]
+✓ SUCCESS
+
+--- Pair 5: miniBRANCH/tree_1_V_0001/Filtered__noGrass/depth/5.png → miniBRANCH/tree_1_V_0001/Filtered__noGrass/depth/6.png ---
+  Testing with max_iter=5... Source shape: torch.Size([1, 8192, 3]), Target shape: torch.Size([1, 8192, 3])
+Source requires_grad: True, Target requires_grad: True
+✓ Inference successful! Iterations: 5
+Estimated transformation:
+[[ 0.9033838  -0.3744162  -0.20906956  0.0018623 ]
+ [ 0.31456265  0.9099262  -0.27034184  0.00324776]
+ [ 0.29145828  0.17845693  0.93978995  0.01660821]
+ [ 0.          0.          0.          1.        ]]
+✓ SUCCESS
+  Testing with max_iter=10... Source shape: torch.Size([1, 8192, 3]), Target shape: torch.Size([1, 
+8192, 3])
+Source requires_grad: True, Target requires_grad: True
+✓ Inference successful! Iterations: 10
+Estimated transformation:
+[[ 0.82573587 -0.5022551  -0.2567097   0.0031357 ]
+ [ 0.43357688  0.85628676 -0.28068453  0.00450946]
+ [ 0.36079243  0.12046787  0.9248331   0.01780785]
+ [ 0.          0.          0.          1.        ]]
+✓ SUCCESS
+  Testing with max_iter=20... Source shape: torch.Size([1, 8192, 3]), Target shape: torch.Size([1, 
+8192, 3])
+Source requires_grad: True, Target requires_grad: True
+✓ Inference successful! Iterations: 20
+Estimated transformation:
+[[ 0.79704654 -0.54005706 -0.2702871   0.00342705]
+ [ 0.47164062  0.836176   -0.27993673  0.00464721]
+ [ 0.37718937  0.09564415  0.92118406  0.01793826]
+ [ 0.          0.          0.          1.        ]]
+✓ SUCCESS
+
+============================================================
+RELIABILITY ANALYSIS
+============================================================
+Success Rate: 100.0% (18/18)
+Translation Error - Mean: 0.0122m
+Translation Error - Std:  0.0048m
+Translation Error - Max:  0.0188m
+Rotation Error - Mean: 22.7°
+Rotation Error - Std:  20.2°
+Rotation Error - Max:  72.2°
+Convergence - Mean iterations: 11.4
+Convergence - Mean rate: 1.0
+
+Problematic pairs (high error or non-convergence):
+  Pair 0: Trans=0.012m, Rot=37.2°, Iter=5/5
+  Pair 0: Trans=0.009m, Rot=55.5°, Iter=10/10
+  Pair 0: Trans=0.008m, Rot=72.2°, Iter=20/20
+  Pair 1: Trans=0.004m, Rot=1.5°, Iter=5/5
+  Pair 1: Trans=0.004m, Rot=1.6°, Iter=10/10
+  Pair 2: Trans=0.017m, Rot=28.9°, Iter=5/5
+  Pair 2: Trans=0.018m, Rot=31.2°, Iter=10/10
+  Pair 2: Trans=0.018m, Rot=31.3°, Iter=20/20
+  Pair 3: Trans=0.012m, Rot=11.6°, Iter=5/5
+  Pair 3: Trans=0.012m, Rot=11.7°, Iter=10/10
+  Pair 3: Trans=0.012m, Rot=11.7°, Iter=20/20
+  Pair 4: Trans=0.012m, Rot=2.7°, Iter=5/5
+  Pair 4: Trans=0.012m, Rot=2.8°, Iter=10/10
+  Pair 4: Trans=0.012m, Rot=2.8°, Iter=20/20
+  Pair 5: Trans=0.017m, Rot=28.8°, Iter=5/5
+  Pair 5: Trans=0.019m, Rot=36.5°, Iter=10/10
+  Pair 5: Trans=0.019m, Rot=39.0°, Iter=20/20

@@ -1,0 +1,48 @@
+{
+  "successes": 3,
+  "failures": 0,
+  "translation_errors": [
+    0.03558929264545441,
+    0.005892390385270119,
+    0.001499511650763452
+  ],
+  "rotation_errors": [
+    19.079658850322534,
+    11.863452622053902,
+    10.99887752873932
+  ],
+  "iterations": [
+    20,
+    20,
+    20
+  ],
+  "pair_results": [
+    {
+      "pair_name": "pair_0_0_to_1",
+      "pair_idx": 0,
+      "iterations": 20,
+      "trans_error": 0.03558929264545441,
+      "rot_error_deg": 19.079658850322534,
+      "success": true,
+      "converged": false
+    },
+    {
+      "pair_name": "pair_1_1_to_5",
+      "pair_idx": 1,
+      "iterations": 20,
+      "trans_error": 0.005892390385270119,
+      "rot_error_deg": 11.863452622053902,
+      "success": true,
+      "converged": false
+    },
+    {
+      "pair_name": "pair_2_5_to_6",
+      "pair_idx": 2,
+      "iterations": 20,
+      "trans_error": 0.001499511650763452,
+      "rot_error_deg": 10.99887752873932,
+      "success": true,
+      "converged": false
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+========================================
+PROCESSING TREE_1_V_0001
+========================================
+Testing 6 pairs from tree_1_V_0001...
+
+--- pair_0_0_to_1 ---
+Source: 0.png
+Target: 1.png
+Source points: 8192, Target points: 8192
+  Running inference (max 20 iterations)... ✓ (20 iterations)
+Visualization saved to: results/tree_1_V_0001/pair_0_0_to_1_iteration_00_initial.png
+Visualization saved to: results/tree_1_V_0001/pair_0_0_to_1_iteration_20_final.png
+  ✓ Saved initial and final visualizations to results/tree_1_V_0001/
+✓ SUCCESS
+  Trans error: 0.0089m, Rot error: 56.6°, Iterations: 20
+
+--- pair_1_1_to_2 ---
+Source: 1.png
+Target: 2.png
+Source points: 8192, Target points: 8192
+  Running inference (max 20 iterations)... ✓ (12 iterations)
+Visualization saved to: results/tree_1_V_0001/pair_1_1_to_2_iteration_00_initial.png
+Visualization saved to: results/tree_1_V_0001/pair_1_1_to_2_iteration_12_final.png
+  ✓ Saved initial and final visualizations to results/tree_1_V_0001/
+✓ SUCCESS
+  Trans error: 0.0043m, Rot error: 1.8°, Iterations: 12
+
+--- pair_2_2_to_3 ---
+Source: 2.png
+Target: 3.png
+Source points: 8192, Target points: 8192
+  Running inference (max 20 iterations)... ✓ (20 iterations)
+Visualization saved to: results/tree_1_V_0001/pair_2_2_to_3_iteration_00_initial.png
+Visualization saved to: results/tree_1_V_0001/pair_2_2_to_3_iteration_20_final.png
+  ✓ Saved initial and final visualizations to results/tree_1_V_0001/
+✓ SUCCESS
+  Trans error: 0.0149m, Rot error: 31.4°, Iterations: 20
+
+--- pair_3_3_to_4 ---
+Source: 3.png
+Target: 4.png
+Source points: 8192, Target points: 8192
+  Running inference (max 20 iterations)... ✓ (19 iterations)
+Visualization saved to: results/tree_1_V_0001/pair_3_3_to_4_iteration_00_initial.png
+Visualization saved to: results/tree_1_V_0001/pair_3_3_to_4_iteration_19_final.png
+  ✓ Saved initial and final visualizations to results/tree_1_V_0001/
+✓ SUCCESS
+  Trans error: 0.0118m, Rot error: 11.5°, Iterations: 19
+
+--- pair_4_4_to_5 ---
+Source: 4.png
+Target: 5.png
+Source points: 8192, Target points: 8192
+  Running inference (max 20 iterations)... ✓ (20 iterations)
+Visualization saved to: results/tree_1_V_0001/pair_4_4_to_5_iteration_00_initial.png
+Visualization saved to: results/tree_1_V_0001/pair_4_4_to_5_iteration_20_final.png
+  ✓ Saved initial and final visualizations to results/tree_1_V_0001/
+✓ SUCCESS
+  Trans error: 0.0122m, Rot error: 2.8°, Iterations: 20
+
+--- pair_5_5_to_6 ---
+Source: 5.png
+Target: 6.png
+Source points: 8192, Target points: 8192
+  Running inference (max 20 iterations)... ✓ (20 iterations)
+Visualization saved to: results/tree_1_V_0001/pair_5_5_to_6_iteration_00_initial.png
+Visualization saved to: results/tree_1_V_0001/pair_5_5_to_6_iteration_20_final.png
+  ✓ Saved initial and final visualizations to results/tree_1_V_0001/
+✓ SUCCESS
+  Trans error: 0.0190m, Rot error: 42.7°, Iterations: 20

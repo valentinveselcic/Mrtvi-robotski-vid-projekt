@@ -1,0 +1,55 @@
+============================================================
+COMPREHENSIVE RELIABILITY TEST
+============================================================
+✓ Loaded model from logs/model_trained_on_ModelNet40_model_best.pth
+Testing 3 pairs...
+
+--- Pair 0: miniBRANCH/tree_1_V_0012/Filtered__noGrass/depth/0.png → miniBRANCH/tree_1_V_0012/Filtered__noGrass/depth/1.png ---
+  Testing with max_iter=20... Source shape: torch.Size([1, 8192, 3]), Target shape: torch.Size([1, 8192, 3])
+Source requires_grad: True, Target requires_grad: True
+✓ Inference successful! Iterations: 20
+Estimated transformation:
+[[ 9.5152974e-01 -3.0724853e-01 -1.3759059e-02 -4.7372561e-04]
+ [ 3.0623409e-01  9.4234610e-01  1.3492569e-01 -1.9189589e-02]
+ [-2.8489951e-02 -1.3259932e-01  9.9076021e-01 -7.7099800e-03]
+ [ 0.0000000e+00  0.0000000e+00  0.0000000e+00  1.0000000e+00]]
+✓ SUCCESS
+
+--- Pair 1: miniBRANCH/tree_1_V_0012/Filtered__noGrass/depth/1.png → miniBRANCH/tree_1_V_0012/Filtered__noGrass/depth/4.png ---
+  Testing with max_iter=20... Source shape: torch.Size([1, 8192, 3]), Target shape: torch.Size([1, 8192, 3])
+Source requires_grad: True, Target requires_grad: True
+✓ Inference successful! Iterations: 17
+Estimated transformation:
+[[ 0.9933841   0.06805034  0.09250522 -0.00349127] 
+ [-0.07974184  0.98840535  0.129214   -0.00637349] 
+ [-0.08263958 -0.13573566  0.9872926  -0.01394651] 
+ [ 0.          0.          0.          1.        ]]
+✓ SUCCESS
+
+--- Pair 2: miniBRANCH/tree_1_V_0012/Filtered__noGrass/depth/4.png → miniBRANCH/tree_1_V_0012/Filtered__noGrass/depth/5.png ---
+  Testing with max_iter=20... Source shape: torch.Size([1, 8192, 3]), Target shape: torch.Size([1, 8192, 3])
+Source requires_grad: True, Target requires_grad: True
+✓ Inference successful! Iterations: 20
+Estimated transformation:
+[[ 0.97892076 -0.15459599 -0.13346983  0.00305216]
+ [ 0.14784294  0.9872396  -0.05916512  0.00552614]
+ [ 0.14091341  0.03818534  0.9892853   0.01311667]
+ [ 0.          0.          0.          1.        ]]
+✓ SUCCESS
+
+============================================================
+RELIABILITY ANALYSIS
+============================================================
+Success Rate: 100.0% (3/3)
+Translation Error - Mean: 0.0170m
+Translation Error - Std:  0.0027m
+Translation Error - Max:  0.0207m
+Rotation Error - Mean: 13.9°
+Rotation Error - Std:  4.1°
+Rotation Error - Max:  19.6°
+Convergence - Mean iterations: 19.0
+Convergence - Mean rate: 1.0
+
+Problematic pairs (high error or non-convergence):
+  Pair 0: Trans=0.021m, Rot=19.6°, Iter=20/20
+  Pair 2: Trans=0.015m, Rot=12.1°, Iter=20/20

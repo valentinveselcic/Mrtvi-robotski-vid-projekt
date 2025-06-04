@@ -106,7 +106,7 @@ def main():
     # Visualize different pairs
     print("Generating visualizations...")
     
-    pairs_to_visualize = [0, 2, 4]  # Failed, good, good
+    pairs_to_visualize = [8, 9, 10]  # Failed, good, good
     
     for pair_idx in pairs_to_visualize:
         if pair_idx < len(dataset):
